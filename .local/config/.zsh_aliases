@@ -1,0 +1,6 @@
+alias ls='lsd'
+alias lt='lsd --tree'
+
+alias ski='sk --ansi -i -c "rg --color=always --line-number \"{}\""'
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

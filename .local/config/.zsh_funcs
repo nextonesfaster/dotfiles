@@ -1,0 +1,9 @@
+vant() {
+    TZ='America/Vancouver' date "$@" "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
+}
+
+hgrep () { fc -Dlim "*$@*" 1 }
+
+copypath() {
+    echo -n "$(realpath "$1")" | pbcopy
+}

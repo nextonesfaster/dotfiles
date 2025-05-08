@@ -1,0 +1,41 @@
+# This is Git's per-user configuration file.
+[user]
+	name = nextonesfaster
+	email = nextonesfaster@gmail.com
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[color]
+	ui = true
+
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+
+[delta]
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+    navigate = true
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[pull]
+	ff = only
