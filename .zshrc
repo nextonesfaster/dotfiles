@@ -40,7 +40,7 @@ source "${HOME}/.local/config/.zsh_aliases"
 source "${HOME}/.local/config/.zsh_funcs"
 
 ### TOOLS INITIALIZATION
-source /Users/arius/.config/broot/launcher/bash/br
+source "$HOME/.config/broot/launcher/bash/br"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -63,18 +63,18 @@ fi;
 ### CONDA INITIALIZATION
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/arius/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$("$HOME/miniconda3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/arius/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/arius/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/arius/miniconda3/bin:$PATH"
+        export PATH="$HOME/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
 # Added by Antigravity
-export PATH="/Users/arius/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
